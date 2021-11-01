@@ -70,7 +70,7 @@ for(item in tests){
 };
 
 
-List path = "c:/user/himehowareu/desktop".)split("/");
+List path = "c:/user/himehowareu/desktop".split("/");
 
 Int place = "abc".find("c");
 
