@@ -9,7 +9,7 @@ from pprint import pprint
 import sys
 
 # with open(sys.argv[1]) as f:
-with open("c:\\users\\himehowareu\\projects\\chime\\sample.chime") as f:
+with open("c:\\users\\himeh\\projects\\chime\\sample.chime") as f:
     program = f.read()
 
 def Tokenize(line: Line) -> Node:
@@ -37,4 +37,7 @@ listFixed = [FilterList(line) for line in floatLitFixed]
 
 dictFixed = [FilterDict(line) for line in listFixed]
 
-pprint(dictFixed)
+
+for line in dictFixed:
+    for word in line:
+        print(word)

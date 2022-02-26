@@ -45,9 +45,9 @@ def lexer(file:str) -> list[Line]:
                 token=char
                 continue 
             elif checkMath:
-             ppend(Line(line,token))
-                token=""
-                continue
+               tokens.append(Line(line,token))
+               token=""
+               continue
             if floating:
                 if char.isnumeric():
                     token+=char
