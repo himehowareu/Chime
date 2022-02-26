@@ -1,0 +1,3 @@
+def Nothing testprint(Obj name){
+	print(thing);
+}

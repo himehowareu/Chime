@@ -1,0 +1,69 @@
+
+DEFINE DATA TYPES AND FUNCTION CALLS
+REGISTER FUNC CALLS AND OBJECTS  AS THET ARE MADE 
+
+
+ef parenthetic_contents(string):
+    """Generate parenthesized contents in string as pairs (level, contents)."""
+    stack = []
+    for i, c in enumerate(string):
+        if c == '(':
+            stack.append(i)
+        elif c == ')' and stack:
+            start = stack.pop()
+            yield (len(stack), string[start + 1: i])
+
+>>> list(parenthetic_contents('(a(b(c)(d)e)(f)g)'))
+[(2, 'c'), (2, 'd'), (1, 'b(c)(d)e'), (1, 'f'), (0, 'a(b(c)(d)e)(f)g')]
+
+
+
+##########################################################################################################
+
+def push(obj, l, depth):
+    while depth:
+        l = l[-1]
+        depth -= 1
+
+    l.append(obj)
+
+def parse_parentheses(s):
+    groups = []
+    depth = 0
+
+    try:
+        for char in s:
+            if char == '(':
+                push([], groups, depth)
+                depth += 1
+            elif char == ')':
+                depth -= 1
+            else:
+                push(char, groups, depth)
+    except IndexError:
+        raise ValueError('Parentheses mismatch')
+
+    if depth > 0:
+        raise ValueError('Parentheses mismatch')
+    else:
+        return groups
+
+print(parse_parentheses('a(b(cd)f)')) # ['a', ['b', ['c', 'd'], 'f']]
+
+
+def 
+
+
+
+
+############################################################################
+
+
+def g(l):
+    out =""
+    for x in l:
+        if type(x) == type(["d"]):
+            out+= " list("+g(x)+")"
+        else:
+            out+= " "+ x
+    return out

@@ -1,0 +1,6 @@
+import data;
+from test import print;
+
+print("this works");
+
+print(data.name);

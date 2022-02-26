@@ -1,0 +1,11 @@
+:i argc 0
+:b stdin 0
+
+:i returncode 0
+:b stdout 111
+[comment Node with text # this is a comment ,
+ NotImp Node with text ,
+ NotImp Node with text print("hi");]
+
+:b stderr 0
+
